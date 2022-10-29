@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script async defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" id="loginBox">
+            <h1 class="text-center">Chat</h1>
+            <div class="col-10">
+                <input class="my-2 form-control" type="text" id="inpUsername" autofocus placeholder="username">
+            </div>
+            <div class="col-10">
+                <input class=" my-2 form-control" type="password" id="inpPass" placeholder="password">
+            </div>
+            <button class="btn btn-primary col-6 my-2" id="btnStart" disabled>Start</button>
+        </div>
+        <div class="row justify-content-center align-items-center" id="chatBox">
+            <h1 class="text-center">Chat</h1>
+            <div class="col-lg-7 col-md-10">
+                <input class="my-2 form-control" type="text" id="inpToUser" placeholder="Send to? (Default: everyone)">
+            </div>
+            <div class="col-lg-7 col-md-10">
+                <input class="my-2 form-control" type="text" id="inpNewMsg" placeholder="message" autofocus>
+            </div>
+            <button class="btn btn-primary col-6 my-2" id="btnSendMsg">Send</button>
+            <hr>
+            <div class="col-lg-7 col-md-10">
+                <ul class="list-group" id="ulMsgs"></ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

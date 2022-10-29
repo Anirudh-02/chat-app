@@ -1,0 +1,11 @@
+#chatBox {
+    display: none;
+    justify-content: center;
+}
+
+#loginBox {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    place-content: center;
+}
